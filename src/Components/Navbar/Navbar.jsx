@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../../assets/logo.png';
 
 const Navbar = () => {
@@ -17,7 +16,7 @@ const Navbar = () => {
               <path d="M1 8h30a1 1 0 000-2H1a1 1 0 000 2zM31 15H1a1 1 0 000 2h30a1 1 0 000-2zM31 24H1a1 1 0 000 2h30a1 1 0 000-2z"></path>
             </g>
           </svg>
-          <h1>MENU</h1>
+          <h6>MENU</h6>
         </div>
         <div>
           <img src={logo} className="h-20" />
@@ -34,7 +33,7 @@ const Navbar = () => {
               fill="#ffffff"
             ></path>
           </svg>
-          <h1 className="">FIND A DEALER</h1>
+          <h6 className="">FIND A DEALER</h6>
         </div>
       </div>
       <hr className="absolute top-40 left-1/2 transform -translate-x-1/2 border-t border-white w-10/12" />
