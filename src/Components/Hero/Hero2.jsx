@@ -1,15 +1,13 @@
 import "./Hero.css";
-import videoBg from '../../assets/video.mp4';
-
+import heroImg from "../../assets/hero2.jpg";
 const Hero = () => {
   return (
     <>
       <section>
         <div className="main">
-          <video src={videoBg} autoPlay loop muted />
+          <img className="heroImage" src={heroImg} />
           <div className="content fadeIn">
-            <h1 className="lg:text-8xl font-light tracking-widest">SPECTRE</h1>
-            <h4 className="lg:text-3xl leading-tight mt-4">IN MOTION</h4>
+            <h1 className="lg:text-8xl font-light tracking-widest">CHARGING SPECTRE</h1>
             <button className="bg-white text-black px-24 py-4 tracking-widest mt-9 border">
               DISCOVER NOW
             </button>

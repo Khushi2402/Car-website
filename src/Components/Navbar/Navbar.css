@@ -1,0 +1,13 @@
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-bg {
+  background-color: rgb(87, 87, 87);
+  transition: background-color 0.3s ease;
+}
+
+hr {
+  border-color: white; /* Ensure hr color is set */
+}

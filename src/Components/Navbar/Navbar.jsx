@@ -1,9 +1,30 @@
-import logo from '../../assets/logo.png';
+import React, { useState, useEffect } from "react";
+import logo from "../../assets/logo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    console.log("Scroll event triggered", window.scrollY); // Check scroll position
+    setColor(window.scrollY >= 80);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
+
+  console.log("Color state:", color);
+
   return (
-    <>
-      <div className="flex fixed w-full pt-10 px-40 align-middle items-center justify-between text-white z-0">
+    <div
+      className={color ? "navbar navbar-bg" : "navbar"}
+      style={{ backgroundColor: color ? "rgb(87, 87, 87)" : "transparent" }}
+    >
+      <div className="flex fixed w-full pt-10 px-40 align-middle items-center justify-between text-white z-50">
         <div className="flex gap-2 align-middle items-center font-medium tracking-light">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +58,8 @@ const Navbar = () => {
         </div>
       </div>
       <hr className="absolute top-40 left-1/2 transform -translate-x-1/2 border-t border-white w-10/12" />
-    </>
+    </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
